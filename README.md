@@ -55,4 +55,8 @@ Obs.: It will say that your board is not connected...
       Eventualy it conectes and programs...
       
 5) VERY IMPORTANT >> Each time you reprogram via WiFi, You have to includ Basic OTA plus your software,other wise you wont be able to reprogram via wifi again!!
+Then, you have to include function arduinoOTAHandle  in the LOOP, To listen to new programming attempts.
+
+6) VERY, VERY IMPORTANT >> If you are using long delays (as in Blink) in the LOOP function, arduinoOTAHandle wont be called necessarily  when you press program button on the Arduino Interface. Since NODE will be probably stuck in the delay function. The longer the delay, the harder it is to reprogram (NOT CONNECTED error).
+>> Proposed solution: create yourself a delay function, calling delay (10) and arduinoOTAHandle in a loop!! Then, NODE will be listenning to reprogram attempts while in delay!!
 
