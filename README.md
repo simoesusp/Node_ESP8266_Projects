@@ -2,6 +2,7 @@
 Repository for my NODE projects
 
 x---------------x--------------------x
+
 NODE NA IDE ARDUINO:
 ESP 8266
 
@@ -38,3 +39,20 @@ d8		15
 A0		17
 
 x-----------x------------x-----------x
+
+HOW TO CONFIGURE OTA (Over The Air) PROGRAMMING
+
+1) Program NODE with Examples >> ArduinoOTA >> Basic OTA
+
+2) Turn on CelPhone WiFi network
+
+3) Change Port (Arduino interface) to: esp8266-ip
+
+4) Now you can reprogram NODE with blik to test
+Obs.: It will say that your board is not connected...
+      Then, No Answer....
+      KEEP TRYING...
+      Eventualy it conectes and programs...
+      
+5) VERY IMPORTANT >> Each time you reprogram via WiFi, You have to includ Basic OTA plus your software,other wise you wont be able to reprogram via wifi again!!
+
