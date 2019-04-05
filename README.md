@@ -38,6 +38,31 @@ d7		13
 d8		15
 A0		17
 
+## Include Pin Definition:
+// All Digital Pins have PWM, except D0   !!!!!!!!!!
+
+// IO PINOUT Definition:
+
+#define D0 16
+
+#define D1 5
+
+#define D2 4
+
+#define D3 0
+
+#define D4 2
+
+#define D5 14
+
+#define D6 12
+
+#define D7 13
+
+#define D8 15
+
+#define A0 0    This need checking !!!
+
 x-----------x------------x-----------x
 
 HOW TO CONFIGURE OTA (Over The Air) PROGRAMMING
