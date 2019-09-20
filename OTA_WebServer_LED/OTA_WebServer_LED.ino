@@ -1,7 +1,7 @@
-#include <ESP8266WiFi.h>
-#include <ESP8266mDNS.h>
-#include <ESP8266WebServer.h>
-#include <WiFiUdp.h>
+#include <WiFi.h>
+#include <WiFiClient.h>
+#include <ESPmDNS.h>
+#include <WebServer.h>
 #include <ArduinoOTA.h>
 
 #ifndef STASSID
@@ -12,10 +12,10 @@
 const char* ssid = STASSID;
 const char* password = STAPSK;
 
-ESP8266WebServer server(80);
+WebServer server(80);
 
 void handleRoot() {
-  server.send(200, "text/plain", "hello from esp8266!");
+  server.send(200, "text/plain", "hello from esp32!");
 }
 
 void handleNotFound() {
@@ -96,7 +96,7 @@ void setup() {
   // END OF OTA SETUP
 
   //HTTP SERVER?
-  if (MDNS.begin("esp8266")) {
+  if (MDNS.begin("esp32")) {
     Serial.println("MDNS responder started");
   }
 
